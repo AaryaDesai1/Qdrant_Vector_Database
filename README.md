@@ -141,7 +141,7 @@ with open('vector_database.json', 'w') as json_file:
     json.dump(points, json_file)
 ```
 
-This script creates a JSON file named "vector_database.json" with the vectors and their metadata. You can then use this JSON file to visualize the vectors in a tool like [TensorSpace](https://tensorspace.org/).
+This script creates a JSON file named "vector_database.json" with the vectors and their metadata. You can then use this JSON file to visualize the vectors in a tool like mpl_toolkits. 
 
 Then, using more visualization code that is provided in this [notebook](https://github.com/AaryaDesai1/Qdrant_Vector_Database/blob/main/visualization.ipynb), I was able to visualize the vectors in 3D space. 
 
