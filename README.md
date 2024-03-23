@@ -77,6 +77,7 @@ curl -L -X PUT 'http://localhost:6333/collections/cocktails/points?wait=true' \
     }'
 ```
 Though the following image is a bit difficult to understand, the last line shows that the values were successfully inserted into the collection.
+
 <img width="1544" alt="image" src="https://github.com/AaryaDesai1/Qdrant_Vector_Database/assets/143753050/a0cd695b-611a-4961-b37c-aa25749cf0c5">
 
 **What do each of those components mean?**
@@ -96,6 +97,7 @@ curl -X POST 'http://localhost:6333/collections/cocktails/points/search' \
     }'
 ```
 This will return the top 3 vectors that are most similar to the query vector. The output should look something like this:
+
 <img width="618" alt="image" src="https://github.com/AaryaDesai1/Qdrant_Vector_Database/assets/143753050/8adaf7ae-9d13-4d44-89ef-413f55b6d910">
 
 ### Step 4.2: Adding a filter to the query
@@ -117,6 +119,7 @@ curl -X POST 'http://localhost:6333/collections/cocktails/points/search' \
     }'
 ```
 This will return the top 3 vectors that are most similar to the query vector and have a payload field "name" that contains the string "Margarita". The output should look something like this:
+
 <img width="608" alt="image" src="https://github.com/AaryaDesai1/Qdrant_Vector_Database/assets/143753050/cb226cfa-1e21-4400-b862-8c1779c86f0c">
 
 
@@ -143,7 +146,12 @@ with open('vector_database.json', 'w') as json_file:
 
 This script creates a JSON file named "vector_database.json" with the vectors and their metadata. You can then use this JSON file to visualize the vectors in a tool like mpl_toolkits. 
 
-Then, using more visualization code that is provided in this [notebook](https://github.com/AaryaDesai1/Qdrant_Vector_Database/blob/main/visualization.ipynb), I was able to visualize the vectors in 3D space. 
+Then, using more visualization code that is provided in this [notebook](https://github.com/AaryaDesai1/Qdrant_Vector_Database/blob/main/visualization.ipynb), I was able to:
 
-![image](https://github.com/AaryaDesai1/Qdrant_Vector_Database/assets/143753050/46a24df5-4da4-4a7b-99ce-b8349584c258)
+### Visualize the vectors in 2D space.
+<center><img width="1015" alt="image" src="https://github.com/AaryaDesai1/Qdrant_Vector_Database/assets/143753050/0a904746-2d07-4d2b-a638-132ab4ec1bf1"></center>
+
+
+### Visualize the vectors in 3D space.
+<center><img width="597" alt="image" src="https://github.com/AaryaDesai1/Qdrant_Vector_Database/assets/143753050/d3fb617a-e067-42a1-a179-22b7404ada49"></center>
 
